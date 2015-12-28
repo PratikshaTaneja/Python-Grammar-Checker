@@ -15,7 +15,7 @@ class Sentence(object):
                 Sentence.completed = 0
                 self.tagOptions = 0
                 
-        def getFiles(self, path="/home/juke/prog/books"):
+        def getFiles(self, path="books"):
                 self.fileList = glob.glob(os.path.join(path, '*.txt'))
                 self.numberOfFiles = len(self.fileList)
 
@@ -56,7 +56,7 @@ class Sentence(object):
         def bookTemplate(self):
                 # a simple template for analyzing every word, in every sentence, in every n of books
                 sentenceCounter = 0
-                self.getFiles("/home/juke/prog/piMnemonic/booksSmall/")
+                self.getFiles("booksSmall/")
                 for filename in self.fileList:
                         self.getSentences(filename)
                         for sentence in self.sentences:
@@ -68,7 +68,7 @@ class Sentence(object):
                                 print
                 print "" + str(sentenceCounter) + " sentences analyzed"
 
-	def findSentence(self, complexWord, folder="/home/juke/prog/booksKindle"):
+	def findSentence(self, complexWord, folder="booksKindle"):
                 # a simple template for analyzing every word, in every sentence, in every n of books
                 self.getFiles(folder)
                 for filename in self.fileList:
@@ -86,6 +86,6 @@ def main():
         #print "analyzing books..."
 	go = Sentence()
 	#wordToLookUp = raw_input("enter word: ")
-	#go.findSentence("farther", "/home/juke/prog/booksKindle")
+	#go.findSentence("farther", "booksKindle")
 
 if __name__ == '__main__':main()

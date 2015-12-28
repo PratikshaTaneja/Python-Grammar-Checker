@@ -454,8 +454,8 @@ class MangleData(object):
 def main():
 
 	"""Step 3: Looping over examples"""
-	#loopTest = CheckGrammar()
-	#loopTest.quickLoop("model3/sheet.csv", ["further", "farther"], 2, 59829, 30171)
+	loopTest = CheckGrammar()
+	loopTest.quickLoop("sheet.csv", ["further", "farther"], 2, 118662, 56870)
 	#loopTest.testFile("bookExtract/furtherKindleSmall.txt", "model3/sheet.csv", ["further", "farther"], 2, 59829.0, 30171.0, True)
 
 	"""Step 2: Compute Bayes"""
@@ -464,12 +464,12 @@ def main():
 	#computeBayes.setupDicts(2)
 
 	#computeBayes = ComputeBayes()
-	#computeBayes.setupDicts(2, "further.txt", "farther.txt")
+	#computeBayes.setupDicts(2, "furtherTag.txt", "fartherTag.txt")
 	#print '@attribute fourleft {' + ','.join(computeBayes.getTagList()) + '}'
 
 
-	#computeBayes.countAllFeatures("further.txt")
-	#computeBayes.countAllFeaturesClass2("farther.txt")
+	#computeBayes.countAllFeatures("furtherTag.txt")
+	#computeBayes.countAllFeaturesClass2("fartherTag.txt")
 	#computeBayes.createSheet()
 	
 	"""Step 1: Mangle Data"""
@@ -484,7 +484,7 @@ def main():
 	#mangleData.trainLargeCorpus(tagIt.processWords, "bookExtract/fartherKindleSmall.txt", 2, "farther", )
 
 	# Word Corpus
-	#mangleData.trainLargeCorpus(wordIt.processWords, "fartherText.txt", 2, "farther")
+	#mangleData.trainLargeCorpus(wordIt.processWords, "farther.txt", 2, "farther")
 	#mangleData2.trainLargeCorpus(wordIt2.processWords, "fartherText.txt", 2, "farther")
 
 	# Syllable Corpus
@@ -492,8 +492,8 @@ def main():
 	#mangleData.trainLargeCorpus(syllableIt.processWords, "bookExtract/fartherKindleSmall.txt", 15, "farther")
 
 	"""Step 0: Get Data"""
-	getSentences = Sentence()
-	getSentences.findSentence("farther", "/home/juke/prog/booksKindle")
+	#getSentences = Sentence()
+	#getSentences.findSentence("farther", "booksKindle")
 
 
 if __name__ == '__main__':main()
